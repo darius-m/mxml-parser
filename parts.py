@@ -133,7 +133,7 @@ class QuizPart:
 		html = markdown.markdown(text)
 
 		# Replace the image markers with the actual images
-		for image_id, image_64 in image_map.items():
+		for image_id, image_b64 in image_map.items():
 			html = html.replace(image_id, f"<img src=\"data:image/png;base64, {image_b64.decode('ascii')}\"/>")
 
 		return html
